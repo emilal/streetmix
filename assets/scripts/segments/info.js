@@ -587,7 +587,7 @@ export const SEGMENT_INFO = {
     owner: SEGMENT_OWNER_BIKE,
     zIndex: 2,
     defaultWidth: 6,
-    variants: ['direction', 'bike-asphalt'],
+    variants: ['direction', 'bike-asphalt', 'bike-lane-elevation'],
     description: {
       prompt: 'Learn more about bike lanes',
       image: 'bike-lane-02.jpg',
@@ -603,7 +603,7 @@ export const SEGMENT_INFO = {
       ]
     },
     details: {
-      'inbound|regular': {
+      'inbound|regular|street-level': {
         minWidth: 5,
         graphics: {
           center: [
@@ -613,7 +613,7 @@ export const SEGMENT_INFO = {
           repeat: { tileset: 2, x: 98, y: 53, width: 10, height: 5, offsetY: 10 } // Asphalt
         }
       },
-      'outbound|regular': {
+      'outbound|regular|street-level': {
         minWidth: 5,
         graphics: {
           center: [
@@ -623,7 +623,7 @@ export const SEGMENT_INFO = {
           repeat: { tileset: 2, x: 98, y: 53, width: 10, height: 5, offsetY: 10 } // Asphalt
         }
       },
-      'inbound|green': {
+      'inbound|green|street-level': {
         minWidth: 5,
         graphics: {
           center: [
@@ -633,7 +633,7 @@ export const SEGMENT_INFO = {
           repeat: { tileset: 2, x: 98 - 10, y: 53 + 10, width: 8, height: 5, offsetY: 10 } // Green asphalt
         }
       },
-      'outbound|green': {
+      'outbound|green|street-level': {
         minWidth: 5,
         graphics: {
           center: [
@@ -643,7 +643,7 @@ export const SEGMENT_INFO = {
           repeat: { tileset: 2, x: 98 - 10, y: 53 + 10, width: 8, height: 5, offsetY: 10 } // Green asphalt
         }
       },
-      'inbound|red': {
+      'inbound|red|street-level': {
         minWidth: 5,
         graphics: {
           center: [
@@ -653,7 +653,7 @@ export const SEGMENT_INFO = {
           repeat: { tileset: 2, x: 98, y: 53 + 10, width: 10, height: 5, offsetY: 10 } // Red asphalt
         }
       },
-      'outbound|red': {
+      'outbound|red|street-level': {
         minWidth: 5,
         graphics: {
           center: [
@@ -661,6 +661,66 @@ export const SEGMENT_INFO = {
             { tileset: 1, x: 39, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (outbound)
           ],
           repeat: { tileset: 2, x: 98, y: 53 + 10, width: 10, height: 5, offsetY: 10 } // Red asphalt
+        }
+      },
+      'inbound|regular|raised': {
+        minWidth: 5,
+        graphics: {
+          center: [
+            { tileset: 1, x: 5, y: 30 + 19, width: 3, height: 8, offsetY: 3.75 },
+            { tileset: 1, x: 30, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (inbound)
+          ],
+          repeat: { tileset: 2, x: 98, y: 53, width: 10, height: 6, offsetY: 9.75 } // Asphalt
+        }
+      },
+      'outbound|regular|raised': {
+        minWidth: 5,
+        graphics: {
+          center: [
+            { tileset: 1, x: 9, y: 30 + 19, width: 3, height: 8, offsetY: 3.75 },
+            { tileset: 1, x: 39, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (outbound)
+          ],
+          repeat: { tileset: 2, x: 98, y: 53, width: 10, height: 6, offsetY: 9.75 } // Asphalt
+        }
+      },
+      'inbound|green|raised': {
+        minWidth: 5,
+        graphics: {
+          center: [
+            { tileset: 1, x: 5, y: 30 + 19, width: 3, height: 8, offsetY: 3.75 },
+            { tileset: 1, x: 30, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (inbound)
+          ],
+          repeat: { tileset: 2, x: 98 - 10, y: 53 + 10, width: 8, height: 6, offsetY: 9.75 } // Green asphalt
+        }
+      },
+      'outbound|green|raised': {
+        minWidth: 5,
+        graphics: {
+          center: [
+            { tileset: 1, x: 9, y: 30 + 19, width: 3, height: 8, offsetY: 3.75 },
+            { tileset: 1, x: 39, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (outbound)
+          ],
+          repeat: { tileset: 2, x: 98 - 10, y: 53 + 10, width: 8, height: 6, offsetY: 9.75 } // Green asphalt
+        }
+      },
+      'inbound|red|raised': {
+        minWidth: 5,
+        graphics: {
+          center: [
+            { tileset: 1, x: 5, y: 30 + 19, width: 3, height: 8, offsetY: 3.75 },
+            { tileset: 1, x: 30, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (inbound)
+          ],
+          repeat: { tileset: 2, x: 98, y: 53 + 10, width: 10, height: 6, offsetY: 9.75 } // Red asphalt
+        }
+      },
+      'outbound|red|raised': {
+        minWidth: 5,
+        graphics: {
+          center: [
+            { tileset: 1, x: 9, y: 30 + 19, width: 3, height: 8, offsetY: 3.75 },
+            { tileset: 1, x: 39, y: 15, width: 4, height: 5, offsetY: 10 } // Arrow (outbound)
+          ],
+          repeat: { tileset: 2, x: 98, y: 53 + 10, width: 10, height: 6, offsetY: 9.75 } // Red asphalt
         }
       }
     }

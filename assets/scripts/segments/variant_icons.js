@@ -240,6 +240,16 @@ export const VARIANT_ICONS = {
       'title': 'Red lane '
     }
   },
+  'bike-lane-elevation': {
+    'street-level': {
+      'id': 'elevation-lower',
+      'title': 'Bike lane'
+    },
+    'raised': {
+      'id': 'elevation-higher',
+      'title': 'Cycletrack'
+    }
+  },
   'transit-shelter-elevation': {
     'street-level': {
       'id': 'elevation-lower',
